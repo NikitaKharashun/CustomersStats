@@ -8,11 +8,11 @@ namespace Nikita_CustomersStat.Elements
 {
     class Customer
     {
-        public string ID { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-        public string Region { get; set; }
-        public decimal Sales { get; set; }
+        public string ID { get; private set; }
+        public string City { get; private set; }
+        public string Country { get; private set; }
+        public string Region { get; private set; }
+        public decimal Sales { get; private set; }
 
         public Customer(string id, string city, string country, string region, decimal sales)
         {
@@ -23,7 +23,7 @@ namespace Nikita_CustomersStat.Elements
             Sales = sales;
         }
 
-        public override string ToString() => $"ID: {ID} \nГород: {City} \nСтрана: {Country} \nРегион:{Region} \nПродажи:{Sales}";
+        public override string ToString() => $"ID: {ID} \nГород: {City} \nСтрана: {Country} \nРегион: {Region} \nПродажи: {Sales}";
 
         public static List<Customer> IniCustomer()
         {
